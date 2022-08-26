@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WeatherToday</string>
+    <string name="weather_today">Weather Today</string>
+    <string name="pin_code">Pin Code</string>
+    <string name="country_code">Country Code</string>
+    <string name="language">Language</string>
+    <string name="units">Units</string>
+    <string name="go">GO!</string>
+</resources>

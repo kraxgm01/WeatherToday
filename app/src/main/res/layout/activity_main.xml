@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/sunrise"
+        android:layout_width="109dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sunrise"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/weatherToday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sunrise"
+        android:text="@string/weather_today"
+        android:textSize="35sp"
+        android:textAlignment="center"
+        android:textColor="#000000"/>
+
+    <EditText
+        android:id="@+id/pinCode"
+        android:layout_width="286dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="84dp"
+        android:hint="@string/pin_code"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/custom_input"
+        app:layout_constraintTop_toBottomOf="@id/weatherToday"
+        android:drawableStart="@drawable/ic_pincode"
+        android:drawablePadding="12dp"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/countryCode"
+        android:layout_width="286dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:hint="@string/country_code"
+        android:drawablePadding="12dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@drawable/custom_input"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pinCode"
+        android:drawableStart="@drawable/ic_countrycode"/>
+
+    <EditText
+        android:id="@+id/Language"
+        android:layout_width="286dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:hint="@string/language"
+        android:drawablePadding="12dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintHorizontal_bias="0.496"
+        android:background="@drawable/custom_input"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/countryCode"
+        android:drawableStart="@drawable/ic_language"/>
+
+    <EditText
+        android:id="@+id/units"
+        android:layout_width="286dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:hint="@string/units"
+        android:drawablePadding="12dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintHorizontal_bias="0.496"
+        android:background="@drawable/custom_input"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Language"
+        android:drawableStart="@drawable/ic_units"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/units"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/go"
+        android:onClick="fetchWeather"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
